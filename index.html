@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -30,7 +30,7 @@ and open the template in the editor.
          
          $.ajax({
              type:"POST",
-             url:"guardarDatos.php",
+             url:"http://andrea92.260mb.net/guardarDatos.php",
              data:"nombre="+nom+"&municipio="+muni+"&direccion="+dire+"&giro="+gir+"&fotografia="+foto+"&altitud="+alt+"&latitud="+lat,
              success:registro
              
@@ -43,7 +43,7 @@ and open the template in the editor.
      btnConsulta.click(function cons(){
          $.ajax({
              type:"POST",
-             url:"consultaBD.php",
+             url:"http://andrea92.260mb.net/consultaBD.php",
              data:"",
              success:consultaDatos
          });
@@ -79,7 +79,7 @@ and open the template in the editor.
       var valConsulta=$("#valConsulta").val();
       $.ajax({
           type:"POST",
-          url:"consultaBD2.php",
+          url:"http://andrea92.260mb.net/consultaBD2.php",
           data:"Id="+valConsulta,
           success:consultaNegocio
           
@@ -96,7 +96,7 @@ and open the template in the editor.
     btnConAct.click(function cargarDat(){
      $.ajax({
              type:"POST",
-             url:"consultaBD.php",
+             url:"http://andrea92.260mb.net/consultaBD.php",
              data:"",
              success:cargarDatos
          }); 
@@ -111,7 +111,7 @@ and open the template in the editor.
          var Id=parseInt($("#nomActualizar").val());
          $.ajax({
              type:"POST",
-             url:"consultaBD2.php",
+             url:"http://andrea92.260mb.net/consultaBD2.php",
              data:"Id="+Id,
              success:cargarDatosAct
              
@@ -166,7 +166,7 @@ var btnGuarDatos=$("#btnGuarDatos");
                 else{
                     $.ajax({
                         type:"POST",
-                        url:"actualizar.php",
+                        url:"http://andrea92.260mb.net/actualizar.php",
                         data:"id="+id+"&nombre="+nombre+"&municipio="+municipio+"&direccion="+direccion+"&giro="+giro+"&fotografia="+fotografia+"&altitud="+altitud+"&latitud="+latitud,
                         success:actualizacion
                     });
@@ -179,7 +179,7 @@ var btnGuarDatos=$("#btnGuarDatos");
                 btnConEliminar.click(function conEliminar(){
                     $.ajax({
                         type:"POST",
-                        url:"consultaBD.php",
+                        url:"http://andrea92.260mb.net/consultaBD.php",
                         data:"",
                         success:consultaAntEliminar
                     
@@ -195,7 +195,7 @@ var btnGuarDatos=$("#btnGuarDatos");
                 var idEliminar=parseInt($("#idEliminar").val());
                 $.ajax({
                         type:"POST",
-                        url:"eliminarDatos.php",
+                        url:"http://andrea92.260mb.net/eliminarDatos.php",
                         data:"id="+idEliminar,
                         success:Eliminacion
                 });
